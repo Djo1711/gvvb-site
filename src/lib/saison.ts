@@ -21,7 +21,7 @@ export const SAISON_FFVB = "2025/2026";
 /** Dossier d'inscription téléchargeable. */
 export const DOSSIER = {
   href: `/docs/dossier-inscription-${SAISON_CLUB}.pdf`,
-  taille: "285 Ko",
+  taille: "401 Ko",
 } as const;
 
 /** Date limite de remise du dossier complet. */
@@ -130,7 +130,7 @@ export const CRENEAUX_COMPETITION: Creneau[] = [
   { jour: "Lundi", debut: "20:00", fin: "22:30", ville: "Vaucresson", gymnase: "Yves du Manoir", groupe: "Départementale M", type: "competition" },
   { jour: "Mercredi", debut: "20:00", fin: "22:30", ville: "Garches", gymnase: "Yves Bodin", groupe: "Départementale F", type: "competition" },
   { jour: "Mercredi", debut: "20:00", fin: "22:30", ville: "Garches", gymnase: "Yves Bodin", groupe: "Départementale M", type: "competition" },
-  { jour: "Vendredi", debut: "20:00", fin: "22:30", ville: "Garches", gymnase: "Yves Bodin", groupe: "Départementale F", type: "competition" },
+  { jour: "Vendredi", debut: "20:30", fin: "22:30", ville: "Garches", gymnase: "Yves Bodin", groupe: "Départementale F", type: "competition" },
   { jour: "Dimanche", debut: "13:00", fin: "18:00", ville: "Garches", gymnase: "Yves Bodin", groupe: "Matchs Départementale F", type: "competition" },
   { jour: "Dimanche", debut: "13:00", fin: "18:00", ville: "Garches", gymnase: "Yves Bodin", groupe: "Matchs Départementale M", type: "competition" },
 ];
@@ -274,7 +274,7 @@ export const EQUIPES_COMPETITION: Equipe[] = [
     photo: "/equipes/dep-feminine.jpg",
     creneaux: [
       "Mercredi 20h - 22h30 · Yves Bodin (Garches)",
-      "Vendredi 20h - 22h30 · Yves Bodin (Garches)",
+      "Vendredi 20h30 - 22h30 · Yves Bodin (Garches)",
       "Dimanche 13h - 18h · Yves Bodin (Garches) - matchs",
     ],
     liens: [
