@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site GVVB — Garches Vaucresson Volley-Ball
 
-## Getting Started
+Site officiel du club de volley-ball de Garches et Vaucresson.
 
-First, run the development server:
+**🌐 [gvvb-zeta.vercel.app](https://gvvb-zeta.vercel.app)**
+
+## Ce qu'on y trouve
+
+- **Le club** : présentation, bureau, contacts
+- **Équipes** : les 11 équipes (compétition, jeunes, loisir)
+- **Entraînements** : emploi du temps de la semaine par catégorie
+- **Inscription** : tarifs, pièces à fournir, dossier PDF à télécharger
+- **Calendrier** : matchs, résultats et classements récupérés automatiquement sur le site de la FFVB (scraping HTML, sans API officielle), avec liens directs de secours si la récupération échoue
+
+## Stack
+
+- [Next.js](https://nextjs.org) (App Router) · React · TypeScript
+- Tailwind CSS v4
+- Déployé sur Vercel, mise en production automatique depuis `main`
+
+## Lancer en local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Puis ouvrir http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Mettre à jour la saison
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Toutes les données du club (saison, créneaux, tarifs, équipes, poules FFVB…) sont regroupées dans **`src/lib/saison.ts`** ; les pages ne font que la mise en forme.
+La procédure complète de changement de saison est décrite dans [`DOCUMENTATION.md`](DOCUMENTATION.md).
