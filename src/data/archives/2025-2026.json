@@ -1,0 +1,1121 @@
+{
+  "saison": "2025-2026",
+  "saisonFfvb": "2025/2026",
+  "archiveLe": "2026-10-05T17:08:54.393Z",
+  "poules": [
+    {
+      "code": "AMA",
+      "label": "Départementale M - Poule principale",
+      "matches": [
+        {
+          "code": "AMA002",
+          "date": "05/10/25",
+          "time": "15:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "LSO COLOMBES 2",
+          "scoreHome": "2",
+          "scoreAway": "3",
+          "sets": "26:24, 25:15, 11:25, 20:25, 11:15"
+        },
+        {
+          "code": "AMA007",
+          "date": "19/10/25",
+          "time": "15:00",
+          "home": "ENTENTE SPORTIVE DE NANTERRE",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "25:17, 18:25, 25:17, 25:18"
+        },
+        {
+          "code": "AMA011",
+          "date": "26/10/25",
+          "time": "15:30",
+          "home": "AMICALE VILLENEUVE LA GARENNE V.B.",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "25:21, 25:18, 25:19"
+        },
+        {
+          "code": "AMA014",
+          "date": "09/11/25",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "USM MALAKOFF",
+          "scoreHome": "2",
+          "scoreAway": "3",
+          "sets": "20:25, 25:19, 13:25, 25:14, 13:15"
+        },
+        {
+          "code": "AMA020",
+          "date": "16/11/25",
+          "time": "15:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ISSY LES MOULINEAUX VB 2",
+          "scoreHome": "2",
+          "scoreAway": "3",
+          "sets": "24:26, 25:19, 25:23, 17:25, 12:15"
+        },
+        {
+          "code": "AMA021",
+          "date": "23/11/25",
+          "time": "15:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "",
+          "scoreHome": null,
+          "scoreAway": null,
+          "sets": null
+        },
+        {
+          "code": "AMA028",
+          "date": "30/11/25",
+          "time": "15:00",
+          "home": "MEUDON CHAVILLE SEVRES V. 3",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "25:21, 25:17, 25:16"
+        },
+        {
+          "code": "AMA030",
+          "date": "07/12/25",
+          "time": "14:00",
+          "home": "LSO COLOMBES 2",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "2",
+          "sets": "24:26, 24:26, 26:24, 31:29, 15:9"
+        },
+        {
+          "code": "AMA035",
+          "date": "11/01/26",
+          "time": "15:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ENTENTE SPORTIVE DE NANTERRE",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "25:13, 25:21, 21:25, 25:22"
+        },
+        {
+          "code": "AMA039",
+          "date": "18/01/26",
+          "time": "15:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "AMICALE VILLENEUVE LA GARENNE V.B.",
+          "scoreHome": "2",
+          "scoreAway": "3",
+          "sets": "25:23, 22:25, 17:25, 25:22, 9:15"
+        },
+        {
+          "code": "AMA042",
+          "date": "25/01/26",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "USM MALAKOFF",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "25:23, 25:21, 25:23"
+        },
+        {
+          "code": "AMA048",
+          "date": "01/02/26",
+          "time": "13:30",
+          "home": "ISSY LES MOULINEAUX VB 2",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "26:24, 25:18, 20:25, 25:11"
+        },
+        {
+          "code": "AMA056",
+          "date": "15/02/26",
+          "time": "15:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "MEUDON CHAVILLE SEVRES V. 3",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "25:23, 25:23, 29:27"
+        }
+      ],
+      "standings": [
+        {
+          "rank": 1,
+          "team": "AMICALE VILLENEUVE LA GARENNE V.B.",
+          "pts": 33,
+          "played": 12,
+          "wins": 12,
+          "losses": 0,
+          "isGvvb": false
+        },
+        {
+          "rank": 2,
+          "team": "ENTENTE SPORTIVE DE NANTERRE",
+          "pts": 22,
+          "played": 12,
+          "wins": 8,
+          "losses": 4,
+          "isGvvb": false
+        },
+        {
+          "rank": 3,
+          "team": "USM MALAKOFF",
+          "pts": 19,
+          "played": 12,
+          "wins": 7,
+          "losses": 5,
+          "isGvvb": false
+        },
+        {
+          "rank": 4,
+          "team": "ISSY LES MOULINEAUX VB 2",
+          "pts": 17,
+          "played": 12,
+          "wins": 6,
+          "losses": 6,
+          "isGvvb": false
+        },
+        {
+          "rank": 5,
+          "team": "MEUDON CHAVILLE SEVRES V. 3",
+          "pts": 14,
+          "played": 12,
+          "wins": 4,
+          "losses": 8,
+          "isGvvb": false
+        },
+        {
+          "rank": 6,
+          "team": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "pts": 14,
+          "played": 12,
+          "wins": 3,
+          "losses": 9,
+          "isGvvb": true
+        },
+        {
+          "rank": 7,
+          "team": "LSO COLOMBES 2",
+          "pts": 7,
+          "played": 12,
+          "wins": 2,
+          "losses": 10,
+          "isGvvb": false
+        }
+      ]
+    },
+    {
+      "code": "AMF",
+      "label": "Départementale M - Poule intermédiaire 2",
+      "matches": [
+        {
+          "code": "AMF003",
+          "date": "14/03/26",
+          "time": "19:30",
+          "home": "COURBEVOIE SPORTS 2",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "1",
+          "scoreAway": "3",
+          "sets": "17:25, 22:25, 25:20, 23:25"
+        },
+        {
+          "code": "AMF004",
+          "date": "22/03/26",
+          "time": "13:00",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "LEVALLOIS SPORTING CLUB 2",
+          "scoreHome": "1",
+          "scoreAway": "3",
+          "sets": "25:23, 15:25, 22:25, 20:25"
+        },
+        {
+          "code": "AMF008",
+          "date": "29/03/26",
+          "time": "13:00",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ACBB 5",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "25:15, 25:23, 18:25, 26:24"
+        },
+        {
+          "code": "AMF012",
+          "date": "12/04/26",
+          "time": "14:00",
+          "home": "RUEIL ATHLETIC CLUB 2",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "25:19, 17:25, 25:21, 28:26"
+        }
+      ],
+      "standings": [
+        {
+          "rank": 1,
+          "team": "COURBEVOIE SPORTS 2",
+          "pts": 13,
+          "played": 6,
+          "wins": 5,
+          "losses": 1,
+          "isGvvb": false
+        },
+        {
+          "rank": 2,
+          "team": "MEUDON CHAVILLE SEVRES V. 3",
+          "pts": 10,
+          "played": 6,
+          "wins": 3,
+          "losses": 3,
+          "isGvvb": false
+        },
+        {
+          "rank": 3,
+          "team": "LEVALLOIS SPORTING CLUB 2",
+          "pts": 9,
+          "played": 6,
+          "wins": 4,
+          "losses": 1,
+          "isGvvb": false
+        },
+        {
+          "rank": 4,
+          "team": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "pts": 9,
+          "played": 6,
+          "wins": 3,
+          "losses": 3,
+          "isGvvb": true
+        },
+        {
+          "rank": 5,
+          "team": "RUEIL ATHLETIC CLUB 2",
+          "pts": 9,
+          "played": 6,
+          "wins": 3,
+          "losses": 3,
+          "isGvvb": false
+        },
+        {
+          "rank": 6,
+          "team": "ACBB 5",
+          "pts": 1,
+          "played": 6,
+          "wins": 0,
+          "losses": 6,
+          "isGvvb": false
+        }
+      ]
+    },
+    {
+      "code": "AFC",
+      "label": "Départementale F - Poule principale",
+      "matches": [
+        {
+          "code": "AFC002",
+          "date": "05/10/25",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ISSY LES MOULINEAUX VB 2",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "21:25, 25:21, 25:15, 25:19"
+        },
+        {
+          "code": "AFC007",
+          "date": "12/10/25",
+          "time": "14:00",
+          "home": "AS SP BOURG LA REINE 2",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "23:25, 25:23, 25:14, 25:22"
+        },
+        {
+          "code": "AFC011",
+          "date": "14/12/25",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ASNIERES VOLLEY 92",
+          "scoreHome": "0",
+          "scoreAway": "3",
+          "sets": "8:25, 18:25, 20:25"
+        },
+        {
+          "code": "AFC020",
+          "date": "16/11/25",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "C S M CLAMART 4",
+          "scoreHome": "0",
+          "scoreAway": "3",
+          "sets": "17:25, 12:25, 8:25"
+        },
+        {
+          "code": "AFC021",
+          "date": "23/11/25",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "",
+          "scoreHome": null,
+          "scoreAway": null,
+          "sets": null
+        },
+        {
+          "code": "AFC028",
+          "date": "29/11/25",
+          "time": "19:00",
+          "home": "ENTENTE SPORTIVE DE NANTERRE",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "25:13, 25:9, 25:15"
+        },
+        {
+          "code": "AFC030",
+          "date": "07/12/25",
+          "time": "13:30",
+          "home": "ISSY LES MOULINEAUX VB 2",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "25:14, 25:14, 25:10"
+        },
+        {
+          "code": "AFC035",
+          "date": "11/01/26",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "AS SP BOURG LA REINE 2",
+          "scoreHome": "1",
+          "scoreAway": "3",
+          "sets": "17:25, 17:25, 25:20, 22:25"
+        },
+        {
+          "code": "AFC039",
+          "date": "18/01/26",
+          "time": "14:00",
+          "home": "ASNIERES VOLLEY 92",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "25:12, 25:23, 25:12"
+        },
+        {
+          "code": "AFC042",
+          "date": "25/01/26",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "",
+          "scoreHome": null,
+          "scoreAway": null,
+          "sets": null
+        },
+        {
+          "code": "AFC048",
+          "date": "31/01/26",
+          "time": "20:00",
+          "home": "C S M CLAMART 4",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "25:10, 25:12, 25:8"
+        },
+        {
+          "code": "AFC056",
+          "date": "15/02/26",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ENTENTE SPORTIVE DE NANTERRE",
+          "scoreHome": "0",
+          "scoreAway": "3",
+          "sets": "12:25, 18:25, 16:25"
+        }
+      ],
+      "standings": [
+        {
+          "rank": 1,
+          "team": "ASNIERES VOLLEY 92",
+          "pts": 27,
+          "played": 10,
+          "wins": 9,
+          "losses": 1,
+          "isGvvb": false
+        },
+        {
+          "rank": 2,
+          "team": "C S M CLAMART 4",
+          "pts": 24,
+          "played": 10,
+          "wins": 8,
+          "losses": 2,
+          "isGvvb": false
+        },
+        {
+          "rank": 3,
+          "team": "ENTENTE SPORTIVE DE NANTERRE",
+          "pts": 21,
+          "played": 10,
+          "wins": 7,
+          "losses": 3,
+          "isGvvb": false
+        },
+        {
+          "rank": 4,
+          "team": "ISSY LES MOULINEAUX VB 2",
+          "pts": 8,
+          "played": 10,
+          "wins": 3,
+          "losses": 7,
+          "isGvvb": false
+        },
+        {
+          "rank": 5,
+          "team": "AS SP BOURG LA REINE 2",
+          "pts": 6,
+          "played": 10,
+          "wins": 2,
+          "losses": 8,
+          "isGvvb": false
+        },
+        {
+          "rank": 6,
+          "team": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "pts": 3,
+          "played": 10,
+          "wins": 1,
+          "losses": 9,
+          "isGvvb": true
+        }
+      ]
+    },
+    {
+      "code": "AFF",
+      "label": "Départementale F - Poule basse",
+      "matches": [
+        {
+          "code": "AFF002",
+          "date": "15/03/26",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "LSO COLOMBES 2",
+          "scoreHome": "0",
+          "scoreAway": "3",
+          "sets": "23:25, 11:25, 15:25"
+        },
+        {
+          "code": "AFF005",
+          "date": "22/03/26",
+          "time": "16:30",
+          "home": "AS SP BOURG LA REINE 1",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "25:16, 25:9, 25:18"
+        },
+        {
+          "code": "AFF008",
+          "date": "29/03/26",
+          "time": "15:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "RUEIL ATHLETIC CLUB 2",
+          "scoreHome": "2",
+          "scoreAway": "3",
+          "sets": "16:25, 28:26, 23:25, 25:18, 8:15"
+        },
+        {
+          "code": "AFF011",
+          "date": "12/04/26",
+          "time": "13:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ASS SPORTIVE FONTENAYSIENNE 1",
+          "scoreHome": "1",
+          "scoreAway": "3",
+          "sets": "25:17, 19:25, 20:25, 16:25"
+        }
+      ],
+      "standings": [
+        {
+          "rank": 1,
+          "team": "AS SP BOURG LA REINE 2",
+          "pts": 16,
+          "played": 6,
+          "wins": 5,
+          "losses": 1,
+          "isGvvb": false
+        },
+        {
+          "rank": 2,
+          "team": "AS SP BOURG LA REINE 1",
+          "pts": 15,
+          "played": 6,
+          "wins": 5,
+          "losses": 1,
+          "isGvvb": false
+        },
+        {
+          "rank": 3,
+          "team": "RUEIL ATHLETIC CLUB 2",
+          "pts": 10,
+          "played": 6,
+          "wins": 4,
+          "losses": 2,
+          "isGvvb": false
+        },
+        {
+          "rank": 4,
+          "team": "ASS SPORTIVE FONTENAYSIENNE 1",
+          "pts": 8,
+          "played": 6,
+          "wins": 3,
+          "losses": 3,
+          "isGvvb": false
+        },
+        {
+          "rank": 5,
+          "team": "LSO COLOMBES 2",
+          "pts": 4,
+          "played": 6,
+          "wins": 1,
+          "losses": 5,
+          "isGvvb": false
+        },
+        {
+          "rank": 6,
+          "team": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "pts": 1,
+          "played": 6,
+          "wins": 0,
+          "losses": 6,
+          "isGvvb": true
+        }
+      ]
+    },
+    {
+      "code": "ORA",
+      "label": "Loisir OR",
+      "matches": [
+        {
+          "code": "ORA004",
+          "date": "17/10/25",
+          "time": "21:00",
+          "home": "ASS SPORTIVE FONTENAYSIENNE 1",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "0",
+          "scoreAway": "3",
+          "sets": "12:21, 16:21, 20:22"
+        },
+        {
+          "code": "ORA008",
+          "date": "03/11/25",
+          "time": "20:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "PLESSIS-ROBINSON VOLLEY-BALL 1",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "21:14, 15:21, 21:14, 21:17"
+        },
+        {
+          "code": "ORA013",
+          "date": "28/10/25",
+          "time": "20:30",
+          "home": "C S M CLAMART 1",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "0",
+          "scoreAway": "3",
+          "sets": "16:21, 19:21, 15:21"
+        },
+        {
+          "code": "ORA019",
+          "date": "08/12/25",
+          "time": "20:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ANTONY VOLLEY 1",
+          "scoreHome": "2",
+          "scoreAway": "3",
+          "sets": "18:21, 21:17, 23:25, 21:19, 13:15"
+        },
+        {
+          "code": "ORA022",
+          "date": "24/11/25",
+          "time": "20:45",
+          "home": "ASNIERES VOLLEY 92 - 1",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "1",
+          "scoreAway": "3",
+          "sets": "19:21, 21:15, 11:21, 19:21"
+        },
+        {
+          "code": "ORA030",
+          "date": "01/12/25",
+          "time": "20:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "SAINT-CLOUD PARIS SF 1",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "18:21, 21:19, 21:14, 21:19"
+        },
+        {
+          "code": "ORA031",
+          "date": "11/12/25",
+          "time": "20:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ISSY LES MOULINEAUX V.B.",
+          "scoreHome": "1",
+          "scoreAway": "3",
+          "sets": "18:21, 21:13, 14:21, 18:21"
+        },
+        {
+          "code": "ORA040",
+          "date": "18/12/25",
+          "time": "20:50",
+          "home": "ES NANTERRE 1",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "21:15, 21:19, 23:21"
+        },
+        {
+          "code": "ORA042",
+          "date": "12/01/26",
+          "time": "20:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "MEUDON CHAVILLE SEVRES V. 1",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "21:13, 19:21, 21:18, 21:10"
+        },
+        {
+          "code": "ORA049",
+          "date": "19/01/26",
+          "time": "20:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ASS SPORTIVE FONTENAYSIENNE 1",
+          "scoreHome": "1",
+          "scoreAway": "3",
+          "sets": "12:21, 21:14, 21:23, 20:22"
+        },
+        {
+          "code": "ORA053",
+          "date": "29/01/26",
+          "time": "21:00",
+          "home": "PLESSIS-ROBINSON VOLLEY-BALL 1",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "0",
+          "sets": "21:14, 21:16, 21:18"
+        },
+        {
+          "code": "ORA058",
+          "date": "12/03/26",
+          "time": "20:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "C S M CLAMART 1",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "21:10, 12:21, 21:11, 21:19"
+        },
+        {
+          "code": "ORA064",
+          "date": "15/04/26",
+          "time": "20:30",
+          "home": "ANTONY VOLLEY 1",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "19:21, 21:12, 21:12, 22:20"
+        },
+        {
+          "code": "ORA067",
+          "date": "16/02/26",
+          "time": "20:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ASNIERES VOLLEY 92 - 1",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "21:13, 22:24, 21:19, 21:13"
+        },
+        {
+          "code": "ORA075",
+          "date": "19/05/26",
+          "time": "20:45",
+          "home": "SAINT-CLOUD PARIS SF 1",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "24:22, 21:11, 20:22, 21:17"
+        },
+        {
+          "code": "ORA076",
+          "date": "26/03/26",
+          "time": "20:15",
+          "home": "ISSY LES MOULINEAUX V.B.",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "1",
+          "sets": "21:18, 21:19, 18:21, 21:16"
+        },
+        {
+          "code": "ORA085",
+          "date": "30/03/26",
+          "time": "20:30",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "ES NANTERRE 1",
+          "scoreHome": "2",
+          "scoreAway": "3",
+          "sets": "21:19, 15:21, 19:21, 21:17, 12:15"
+        },
+        {
+          "code": "ORA087",
+          "date": "09/04/26",
+          "time": "21:00",
+          "home": "MEUDON CHAVILLE SEVRES V. 1",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "3",
+          "scoreAway": "2",
+          "sets": "15:21, 21:17, 21:17, 17:21, 15:8"
+        }
+      ],
+      "standings": [
+        {
+          "rank": 1,
+          "team": "PLESSIS-ROBINSON VOLLEY-BALL 1",
+          "pts": 41,
+          "played": 18,
+          "wins": 13,
+          "losses": 5,
+          "isGvvb": false
+        },
+        {
+          "rank": 2,
+          "team": "ANTONY VOLLEY 1",
+          "pts": 40,
+          "played": 18,
+          "wins": 13,
+          "losses": 5,
+          "isGvvb": false
+        },
+        {
+          "rank": 3,
+          "team": "ISSY LES MOULINEAUX V.B.",
+          "pts": 38,
+          "played": 18,
+          "wins": 13,
+          "losses": 5,
+          "isGvvb": false
+        },
+        {
+          "rank": 4,
+          "team": "ES NANTERRE 1",
+          "pts": 32,
+          "played": 18,
+          "wins": 13,
+          "losses": 5,
+          "isGvvb": false
+        },
+        {
+          "rank": 5,
+          "team": "ASS SPORTIVE FONTENAYSIENNE 1",
+          "pts": 31,
+          "played": 18,
+          "wins": 11,
+          "losses": 7,
+          "isGvvb": false
+        },
+        {
+          "rank": 6,
+          "team": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "pts": 27,
+          "played": 18,
+          "wins": 8,
+          "losses": 10,
+          "isGvvb": true
+        },
+        {
+          "rank": 7,
+          "team": "C S M CLAMART 1",
+          "pts": 21,
+          "played": 18,
+          "wins": 7,
+          "losses": 11,
+          "isGvvb": false
+        },
+        {
+          "rank": 8,
+          "team": "SAINT-CLOUD PARIS SF 1",
+          "pts": 21,
+          "played": 18,
+          "wins": 6,
+          "losses": 12,
+          "isGvvb": false
+        },
+        {
+          "rank": 9,
+          "team": "MEUDON CHAVILLE SEVRES V. 1",
+          "pts": 13,
+          "played": 18,
+          "wins": 4,
+          "losses": 14,
+          "isGvvb": false
+        },
+        {
+          "rank": 10,
+          "team": "ASNIERES VOLLEY 92 - 1",
+          "pts": 6,
+          "played": 18,
+          "wins": 2,
+          "losses": 16,
+          "isGvvb": false
+        }
+      ]
+    },
+    {
+      "code": "MFB",
+      "label": "M15 Féminines",
+      "matches": [
+        {
+          "code": "MFB007",
+          "date": "08/11/25",
+          "time": "14:00",
+          "home": "RUEIL ATHLETIC CLUB 1",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "2",
+          "scoreAway": "0",
+          "sets": "25:21, 25:17"
+        },
+        {
+          "code": "MFB008",
+          "date": "08/11/25",
+          "time": null,
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "MEUDON CHAVILLE SEVRES V. 3",
+          "scoreHome": "2",
+          "scoreAway": "0",
+          "sets": "26:24, 25:18"
+        },
+        {
+          "code": "MFB016",
+          "date": "22/11/25",
+          "time": "14:30",
+          "home": "SAINT-CLOUD PARIS SF",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "0",
+          "scoreAway": "2",
+          "sets": "15:25, 18:25"
+        },
+        {
+          "code": "MFB017",
+          "date": "22/11/25",
+          "time": null,
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "RUEIL ATHLETIC CLUB 2",
+          "scoreHome": "2",
+          "scoreAway": "1",
+          "sets": "25:12, 21:25, 18:16"
+        },
+        {
+          "code": "MFB025",
+          "date": "06/12/25",
+          "time": "14:00",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "MEUDON CHAVILLE SEVRES V. 2",
+          "scoreHome": "2",
+          "scoreAway": "0",
+          "sets": "25:21, 25:21"
+        },
+        {
+          "code": "MFB027",
+          "date": "06/12/25",
+          "time": null,
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "PLESSIS-ROBINSON VOLLEY-BALL 2",
+          "scoreHome": "0",
+          "scoreAway": "2",
+          "sets": "11:25, 13:25"
+        },
+        {
+          "code": "MFB029",
+          "date": "17/01/26",
+          "time": null,
+          "home": "C S M CLAMART 2",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "2",
+          "scoreAway": "0",
+          "sets": "25:15, 25:8"
+        },
+        {
+          "code": "MFB030",
+          "date": "17/01/26",
+          "time": null,
+          "home": "AS.SP.VOLTAIRE CHATENAY",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "2",
+          "scoreAway": "0",
+          "sets": "25:20, 25:18"
+        },
+        {
+          "code": "MFB037",
+          "date": "07/02/26",
+          "time": "14:00",
+          "home": "MEUDON CHAVILLE SEVRES V. 3",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "2",
+          "scoreAway": "1",
+          "sets": "25:23, 13:25, 15:5"
+        },
+        {
+          "code": "MFB038",
+          "date": "07/02/26",
+          "time": null,
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "AS.SP.VOLTAIRE CHATENAY",
+          "scoreHome": "2",
+          "scoreAway": "0",
+          "sets": "25:22, 25:22"
+        },
+        {
+          "code": "MFB052",
+          "date": "14/03/26",
+          "time": "14:00",
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "SAINT-CLOUD PARIS SF",
+          "scoreHome": "2",
+          "scoreAway": "0",
+          "sets": "25:10, 25:13"
+        },
+        {
+          "code": "MFB054",
+          "date": "14/03/26",
+          "time": null,
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "RUEIL ATHLETIC CLUB 2",
+          "scoreHome": "2",
+          "scoreAway": "1",
+          "sets": "25:22, 25:27, 15:2"
+        },
+        {
+          "code": "MFB059",
+          "date": "11/04/26",
+          "time": null,
+          "home": "PLESSIS-ROBINSON VOLLEY-BALL 2",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "2",
+          "scoreAway": "0",
+          "sets": "25:17, 25:5"
+        },
+        {
+          "code": "MFB060",
+          "date": "11/04/26",
+          "time": null,
+          "home": "C S M CLAMART 2",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "2",
+          "scoreAway": "0",
+          "sets": "25:17, 25:13"
+        },
+        {
+          "code": "MFB070",
+          "date": "16/05/26",
+          "time": "14:00",
+          "home": "MEUDON CHAVILLE SEVRES V. 2",
+          "away": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "scoreHome": "0",
+          "scoreAway": "2",
+          "sets": "19:25, 19:25"
+        },
+        {
+          "code": "MFB071",
+          "date": "16/05/26",
+          "time": null,
+          "home": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "away": "RUEIL ATHLETIC CLUB 1",
+          "scoreHome": "1",
+          "scoreAway": "2",
+          "sets": "23:25, 25:23, 11:15"
+        }
+      ],
+      "standings": [
+        {
+          "rank": 1,
+          "team": "C S M CLAMART 2",
+          "pts": 43,
+          "played": 16,
+          "wins": 15,
+          "losses": 1,
+          "isGvvb": false
+        },
+        {
+          "rank": 2,
+          "team": "PLESSIS-ROBINSON VOLLEY-BALL 2",
+          "pts": 41,
+          "played": 16,
+          "wins": 14,
+          "losses": 2,
+          "isGvvb": false
+        },
+        {
+          "rank": 3,
+          "team": "RUEIL ATHLETIC CLUB 1",
+          "pts": 39,
+          "played": 16,
+          "wins": 13,
+          "losses": 3,
+          "isGvvb": false
+        },
+        {
+          "rank": 4,
+          "team": "GARCHES VAUCRESSON VOLLEY-BALL",
+          "pts": 24,
+          "played": 16,
+          "wins": 8,
+          "losses": 8,
+          "isGvvb": true
+        },
+        {
+          "rank": 5,
+          "team": "AS.SP.VOLTAIRE CHATENAY",
+          "pts": 23,
+          "played": 16,
+          "wins": 8,
+          "losses": 8,
+          "isGvvb": false
+        },
+        {
+          "rank": 6,
+          "team": "MEUDON CHAVILLE SEVRES V. 2",
+          "pts": 23,
+          "played": 16,
+          "wins": 7,
+          "losses": 9,
+          "isGvvb": false
+        },
+        {
+          "rank": 7,
+          "team": "MEUDON CHAVILLE SEVRES V. 3",
+          "pts": 12,
+          "played": 16,
+          "wins": 5,
+          "losses": 11,
+          "isGvvb": false
+        },
+        {
+          "rank": 8,
+          "team": "RUEIL ATHLETIC CLUB 2",
+          "pts": 8,
+          "played": 16,
+          "wins": 1,
+          "losses": 15,
+          "isGvvb": false
+        },
+        {
+          "rank": 9,
+          "team": "SAINT-CLOUD PARIS SF",
+          "pts": 3,
+          "played": 16,
+          "wins": 1,
+          "losses": 15,
+          "isGvvb": false
+        }
+      ]
+    }
+  ]
+}

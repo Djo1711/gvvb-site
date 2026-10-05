@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { SAISONS_ARCHIVEES } from "@/lib/saison";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://gvvb.fr";
@@ -10,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/calendrier", priority: 0.7 },
     { url: "/inscription", priority: 0.9 },
     { url: "/contact", priority: 0.6 },
+    ...SAISONS_ARCHIVEES.map((saison) => ({ url: `/calendrier/archives/${saison}`, priority: 0.3 })),
   ];
   return pages.map(({ url, priority }) => ({
     url: `${base}${url}`,

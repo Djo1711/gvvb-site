@@ -1,14 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { formatDate, matchResult, opponentName, type Match, type Standing } from "@/lib/ffvb";
-import { ffvbUrl } from "@/lib/saison";
+import { useState, type ReactNode } from "react";
+import { formatDate, matchResult, opponentName, type Match, type PouleData, type Standing } from "@/lib/ffvb";
+import { ffvbComiteUrl, ffvbUrl } from "@/lib/saison";
 
-interface PouleData {
-  code: string;
+/** Équipe engagée dont la poule n'est pas encore publiée par la FFVB. */
+interface PouleAVenir {
   label: string;
-  matches: Match[];
-  standings: Standing[];
+  statut: string;
 }
 
 function dateToNum(ddmmyy: string): number {
@@ -118,7 +117,7 @@ function StandingsTable({ standings }: { standings: Standing[] }) {
                   {s.rank}
                 </td>
                 <td className={`py-2 px-4 ${s.isGvvb ? "text-white" : "text-gray-700"}`}>
-                  {s.isGvvb ? "GVVB" : s.team.split(" ").slice(0, 4).join(" ")}
+                  {s.isGvvb ? "GVVB" : s.team}
                 </td>
                 <td className={`py-2 px-3 text-center font-heading font-bold ${s.isGvvb ? "text-white" : "text-gvvb-navy"}`}>
                   {s.pts}
@@ -136,22 +135,35 @@ function StandingsTable({ standings }: { standings: Standing[] }) {
             ))}
           </tbody>
         </table>
-        <div className="px-4 py-2 text-right">
-          <a
-            href="https://www.ffvbbeach.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-heading text-xs text-gray-400 hover:text-gvvb-red transition-colors"
-          >
-            Source : ffvbbeach.org ↗
-          </a>
-        </div>
       </div>
     </div>
   );
 }
 
-function AccordionSection({ label, matches, standings }: { label: string; matches: Match[]; standings: Standing[] }) {
+function FfvbLink({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-heading text-xs uppercase tracking-wider text-gvvb-red hover:text-gvvb-red-dark transition-colors"
+    >
+      {children} ↗
+    </a>
+  );
+}
+
+function AccordionSection({
+  label,
+  matches,
+  standings,
+  href,
+}: {
+  label: string;
+  matches: Match[];
+  standings: Standing[];
+  href: string;
+}) {
   const [open, setOpen] = useState(false);
 
   if (matches.length === 0) return null;
@@ -224,13 +236,40 @@ function AccordionSection({ label, matches, standings }: { label: string; matche
               </tbody>
             </table>
           </div>
+          <div className="px-4 py-3 text-right border-t border-gray-100">
+            <FfvbLink href={href}>Voir la poule sur ffvbbeach.org</FfvbLink>
+          </div>
         </div>
       )}
     </div>
   );
 }
 
-export default function CalendrierClient({ pouleData }: { pouleData: PouleData[] }) {
+function SectionAVenir({ label, statut, href }: PouleAVenir & { href: string }) {
+  return (
+    <div className="border border-gray-200 flex flex-wrap items-center justify-between px-5 py-4 bg-white gap-x-4 gap-y-2">
+      <div className="flex items-center gap-4 min-w-0">
+        <span className="w-4 h-4 flex-shrink-0" aria-hidden />
+        <span className="font-heading font-bold text-gvvb-navy text-base truncate">{label}</span>
+        <span className="font-heading text-xs uppercase tracking-wide bg-gray-100 text-gray-500 px-2 py-0.5 whitespace-nowrap">
+          {statut}
+        </span>
+      </div>
+      <FfvbLink href={href}>ffvbbeach.org</FfvbLink>
+    </div>
+  );
+}
+
+export default function CalendrierClient({
+  pouleData,
+  saison,
+  aVenir = [],
+}: {
+  pouleData: PouleData[];
+  /** Saison FFVB des liens externes, ex. "2026/2027". */
+  saison: string;
+  aVenir?: readonly PouleAVenir[];
+}) {
   const hasData = pouleData.some((p) => p.matches.length > 0 || p.standings.length > 0);
 
   if (!hasData) {
@@ -241,7 +280,7 @@ export default function CalendrierClient({ pouleData }: { pouleData: PouleData[]
           {pouleData.map((p) => (
             <a
               key={p.code}
-              href={ffvbUrl(p.code)}
+              href={ffvbUrl(p.code, saison)}
               target="_blank"
               rel="noopener noreferrer"
               className="font-heading text-xs uppercase tracking-wider text-gvvb-red border border-gvvb-red px-4 py-2 hover:bg-gvvb-red hover:text-white transition-colors"
@@ -257,7 +296,16 @@ export default function CalendrierClient({ pouleData }: { pouleData: PouleData[]
   return (
     <div className="flex flex-col gap-3">
       {pouleData.map((p) => (
-        <AccordionSection key={p.code} label={p.label} matches={p.matches} standings={p.standings} />
+        <AccordionSection
+          key={p.code}
+          label={p.label}
+          matches={p.matches}
+          standings={p.standings}
+          href={ffvbUrl(p.code, saison)}
+        />
+      ))}
+      {aVenir.map((p) => (
+        <SectionAVenir key={p.label} {...p} href={ffvbComiteUrl(saison)} />
       ))}
     </div>
   );

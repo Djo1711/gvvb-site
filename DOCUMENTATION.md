@@ -33,8 +33,20 @@ Toutes les données de référence du club vivent dans **un seul fichier** :
    - mettre à jour `SAISON_CLUB`, `DOSSIER.taille`, `DATE_LIMITE`
    - décaler `CATEGORIES_AGE` d'un an, réécrire les `CRENEAUX_*` et `TARIFS`
 2. **Compétition** (quand la FFVB publie les poules, généralement fin septembre) :
+   - **archiver la saison qui se termine** *avant* de toucher à `SAISON_FFVB`,
+     en listant les poules de l'ancienne saison (codes et libellés de `POULES`) :
+     ```bash
+     npx tsx scripts/archiver-saison.ts 2025/2026 "AMA=Départementale M - Poule principale" "AFC=Départementale F - Poule principale"
+     ```
+     puis importer le JSON généré dans `src/data/archives/index.ts` et ajouter
+     la saison en tête de `SAISONS_ARCHIVEES`. Elle apparaît alors sous
+     `/calendrier/archives/<saison>` et en lien en bas de `/calendrier`.
    - passer `SAISON_FFVB` à la nouvelle saison
    - mettre à jour les codes de `POULES` — **ils changent chaque saison**
+     (ex. `AMA` en 2025/2026, `1MA` en 2026/2027)
+   - les équipes engagées dont la poule n'est pas encore publiée vont dans
+     `POULES_A_VENIR` (ligne « Inscriptions en cours » sans résultats)
+   - mettre à jour les `liens` des équipes dans `EQUIPES_*`
    - vérifier `/calendrier` : en cas d'échec du scraping, la page affiche
      automatiquement des liens directs vers ffvbbeach.org
 
@@ -193,7 +205,18 @@ Chaque poule est un **accordion dépliable** qui affiche :
 1. **Classement** : tableau avec la ligne GVVB surlignée en rouge
 2. **Matchs** : date, domicile/extérieur, adversaire, score (vert/rouge), détail des sets
 3. **Forme** : badges V/D sur les 5 derniers matchs joués
-4. **Fallback** : si le scraping échoue, liens directs vers ffvbbeach.org
+4. **Lien FFVB** : « Voir la poule sur ffvbbeach.org » en bas de chaque poule
+5. **Fallback** : si le scraping échoue, liens directs vers ffvbbeach.org
+
+Les équipes de `POULES_A_VENIR` s'affichent sous les poules avec la mention
+« Inscriptions en cours » et un lien vers l'accueil du comité sur ffvbbeach.org.
+En bas de page, un lien par saison de `SAISONS_ARCHIVEES`.
+
+### Archives (`/calendrier/archives/[saison]`)
+
+Même affichage que `/calendrier`, mais lu depuis `src/data/archives/<saison>.json`
+(résultats figés par `scripts/archiver-saison.ts`, aucun appel à la FFVB).
+Seules les saisons de `SAISONS_ARCHIVEES` sont générées (`dynamicParams = false`).
 
 Header : `filet-m.jpg` · objectPosition : `20% 30%`
 
@@ -378,10 +401,14 @@ Ensuite deux parsers travaillent sur ce tableau de cellules :
 `CODE_MATCH → DATE(DD/MM/YY) → [HEURE] → DOMICILE → EXTÉRIEUR → [SCORE]`  
 Ne conserve que les matchs où "GARCHES" apparaît.
 
-**`parseStandings()`** : détecte les lignes de classement par pattern  
-`RANG(1.) → ÉQUIPE → PTS → J → V → D`
+Les codes de match sont `AMA001` jusqu'en 2025/2026 et `1MA001` depuis 2026/2027.
 
-**`fetchPoule(code)`** retourne `{ matches: Match[], standings: Standing[] }`  
+**`parseStandings()`** : lit le tableau **ligne par ligne en gardant les cellules
+vides** (la FFVB laisse vides les colonnes à zéro : 3-0, 3-1, forfaits… ; les
+ignorer décalait les colonnes V/D). Colonnes : `RANG(1.) → ÉQUIPE → PTS → J → V → D`.
+Un ex-aequo est noté `.` et reprend le rang précédent.
+
+**`fetchPoule(code, saison?)`** retourne `{ matches: Match[], standings: Standing[] }`  
 avec `revalidate: 3600` (cache 1 heure).
 
 ### Interfaces TypeScript
@@ -504,7 +531,7 @@ rm -rf .next/
 | Haute | Compléter les mentions légales (adresse association, email, responsable publication) |
 | Haute | DNS : pointer `gvvb.fr` vers Vercel |
 | Haute | Google Search Console : soumettre le sitemap |
-| Haute | **Passer `SAISON_FFVB` à `2026/2027`** + nouveaux codes de `POULES` dès publication FFVB |
+| Haute | Ajouter le Loisir OR (et M15 / M18 si engagées) dans `POULES` dès que la FFVB publie leurs poules 2026/2027 |
 | Moyenne | Confirmer le nom du gymnase du 20 rue de Suresnes : le dossier écrit « les Meuries », le site « Yves Bodin » |
 | Moyenne | Photos des équipes jeunes et loisir sans visuel (voir § Photos équipes) |
 | Moyenne | Vérifier les poules jeunes engagées en championnat (M18 Filles n'a pas encore de lien FFVB) |

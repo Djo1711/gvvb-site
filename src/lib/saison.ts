@@ -13,10 +13,9 @@ export const SAISON_CLUB = "2026-2027";
  * Saison utilisée pour la FFVB (scraping des résultats et liens externes).
  * Volontairement distincte de SAISON_CLUB : les poules d'une nouvelle saison
  * ne sont publiées par la FFVB qu'une fois le championnat lancé, et leurs
- * codes changent chaque année. À basculer sur "2026/2027" avec les nouveaux
- * codes de POULES quand la FFVB les publie.
+ * codes changent chaque année. Voir DOCUMENTATION.md § « Changer de saison ».
  */
-export const SAISON_FFVB = "2025/2026";
+export const SAISON_FFVB = "2026/2027";
 
 /** Dossier d'inscription téléchargeable. */
 export const DOSSIER = {
@@ -210,19 +209,35 @@ export const BUREAU = [
 /** Comité départemental des Hauts-de-Seine. */
 export const CODE_ENTITE_FFVB = "PTIDF92";
 
-export function ffvbUrl(poule: string): string {
-  return `https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=${SAISON_FFVB}&codent=${CODE_ENTITE_FFVB}&poule=${poule}`;
+export function ffvbUrl(poule: string, saison: string = SAISON_FFVB): string {
+  return `https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=${saison}&codent=${CODE_ENTITE_FFVB}&poule=${poule}`;
+}
+
+/** Page d'accueil du comité sur ffvbbeach.org : liste toutes les poules de la saison. */
+export function ffvbComiteUrl(saison: string = SAISON_FFVB): string {
+  return `https://www.ffvbbeach.org/ffvbapp/resu/vbspo_home.php?saison=${saison}&codent=${CODE_ENTITE_FFVB}`;
 }
 
 /** Poules suivies sur la page Calendrier. Les codes changent chaque saison. */
 export const POULES = [
-  { code: "AMA", label: "Départementale M - Poule principale" },
-  { code: "AMF", label: "Départementale M - Poule intermédiaire 2" },
-  { code: "AFC", label: "Départementale F - Poule principale" },
-  { code: "AFF", label: "Départementale F - Poule basse" },
-  { code: "ORA", label: "Loisir OR" },
-  { code: "MFB", label: "M15 Féminines" },
+  { code: "1MA", label: "Départementale M" },
+  { code: "1FA", label: "Départementale F" },
 ] as const;
+
+/**
+ * Équipes dont l'engagement n'est pas encore publié par la FFVB : affichées
+ * sur la page Calendrier sans résultats. Dès que la poule existe, déplacer
+ * l'entrée dans POULES avec son code.
+ */
+export const POULES_A_VENIR = [
+  { label: "Loisir OR", statut: "Inscriptions en cours" },
+] as const;
+
+/**
+ * Saisons archivées, de la plus récente à la plus ancienne. Les résultats
+ * sont figés dans `src/data/archives/<saison>.json` (voir DOCUMENTATION.md).
+ */
+export const SAISONS_ARCHIVEES: readonly string[] = ["2025-2026"];
 
 // ---------------------------------------------------------------------------
 // Équipes
@@ -251,17 +266,14 @@ export const EQUIPES_COMPETITION: Equipe[] = [
     genre: "Masculin",
     coachs: ["Christelle"],
     description:
-      "L'équipe masculine évolue en championnat départemental dans les Hauts-de-Seine. Après une phase principale en poule A, l'équipe a disputé la poule intermédiaire 2.",
+      "L'équipe masculine évolue en championnat départemental dans les Hauts-de-Seine.",
     photo: "/equipes/dep-masculine.jpg",
     creneaux: [
       "Lundi 20h - 22h30 · Yves du Manoir (Vaucresson)",
       "Mercredi 20h - 22h30 · Yves Bodin (Garches)",
       "Dimanche 13h - 18h · Yves Bodin (Garches) - matchs",
     ],
-    liens: [
-      { label: "Poule principale (AMA)", poule: "AMA" },
-      { label: "Poule intermédiaire 2 (AMF)", poule: "AMF" },
-    ],
+    liens: [{ label: "Départementale M (1MA)", poule: "1MA" }],
   },
   {
     id: "dep-feminine",
@@ -270,17 +282,14 @@ export const EQUIPES_COMPETITION: Equipe[] = [
     genre: "Féminin",
     coachs: ["Florian"],
     description:
-      "L'équipe féminine évolue en championnat départemental. Après la phase principale, l'équipe a disputé la poule basse.",
+      "L'équipe féminine évolue en championnat départemental dans les Hauts-de-Seine.",
     photo: "/equipes/dep-feminine.jpg",
     creneaux: [
       "Mercredi 20h - 22h30 · Yves Bodin (Garches)",
       "Vendredi 20h30 - 22h30 · Yves Bodin (Garches)",
       "Dimanche 13h - 18h · Yves Bodin (Garches) - matchs",
     ],
-    liens: [
-      { label: "Poule principale (AFC)", poule: "AFC" },
-      { label: "Poule basse (AFF)", poule: "AFF" },
-    ],
+    liens: [{ label: "Départementale F (1FA)", poule: "1FA" }],
   },
 ];
 
@@ -320,7 +329,7 @@ export const EQUIPES_JEUNES: Equipe[] = [
       "Nos jeunes filles disputent le championnat départemental M15. Formation et compétition au programme pour nos futures championnes.",
     photo: "/equipes/m15-feminine.jpg",
     creneaux: ["Mercredi 18h30 - 20h30 · Le Rallec (Garches)"],
-    liens: [{ label: "Championnat M15 F (MFB)", poule: "MFB" }],
+    liens: [],
   },
   {
     id: "m18-filles",
@@ -362,7 +371,7 @@ export const EQUIPES_LOISIR: Equipe[] = [
       "L'équipe Loisir OR évolue dans la poule OR du championnat loisir. Une équipe mixte pour ceux qui veulent conjuguer compétition et plaisir du jeu.",
     photo: "/equipes/loisir-or.jpg",
     creneaux: ["Jeudi 20h - 22h30 · Yves du Manoir (Vaucresson)"],
-    liens: [{ label: "Poule OR", poule: "ORA" }],
+    liens: [],
   },
   {
     id: "loisir-4x4-feminine",

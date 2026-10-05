@@ -23,24 +23,48 @@ export interface Standing {
 
 const CLUB = "GARCHES";
 
+function cleanCell(raw: string): string {
+  return raw
+    .replace(/<[^>]+>/g, "")
+    .replace(/&nbsp;/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function parseCells(html: string): string[] {
   const cells: string[] = [];
   const re = /<td[^>]*>([\s\S]*?)<\/td>/gi;
   let m: RegExpExecArray | null;
   while ((m = re.exec(html)) !== null) {
-    const text = m[1]
-      .replace(/<[^>]+>/g, "")
-      .replace(/&nbsp;/g, "")
-      .replace(/\s+/g, " ")
-      .trim();
+    const text = cleanCell(m[1]);
     if (text) cells.push(text);
   }
   return cells;
 }
 
+/**
+ * Cellules ligne par ligne, cellules vides comprises : le classement FFVB
+ * laisse vides les colonnes à zéro (3-0, 3-1, forfaits…), les ignorer
+ * décalerait les colonnes.
+ */
+function parseRows(html: string): string[][] {
+  const rows: string[][] = [];
+  const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
+  let r: RegExpExecArray | null;
+  while ((r = rowRe.exec(html)) !== null) {
+    const cells: string[] = [];
+    const cellRe = /<td[^>]*>([\s\S]*?)<\/td>/gi;
+    let c: RegExpExecArray | null;
+    while ((c = cellRe.exec(r[1])) !== null) cells.push(cleanCell(c[1]));
+    rows.push(cells);
+  }
+  return rows;
+}
+
 export function parseMatches(html: string): Match[] {
   const cells = parseCells(html);
-  const codeRe = /^[A-Z]{2,4}\d{3}$/;
+  // "AMA001" jusqu'en 2025/2026, "1MA001" depuis 2026/2027.
+  const codeRe = /^[A-Z0-9]{2,4}\d{3}$/;
   const dateRe = /^\d{2}\/\d{2}\/\d{2}$/;
   const timeRe = /^\d{2}:\d{2}$/;
   const scoreRe = /^\d$/;
@@ -80,27 +104,26 @@ export function parseMatches(html: string): Match[] {
 }
 
 export function parseStandings(html: string): Standing[] {
-  const cells = parseCells(html);
-  const rankRe = /^\d{1,2}\.$/;
-  const numRe = /^\d+$/;
+  // Colonnes : rang | équipe | points | joués | gagnés | perdus | …
+  // Un ex-aequo est noté "." au lieu du rang : il reprend celui de la ligne précédente.
+  const rankRe = /^(\d{1,2})?\.$/;
+  const num = (v: string | undefined) => (v && /^\d+$/.test(v) ? parseInt(v) : 0);
   const standings: Standing[] = [];
 
-  for (let i = 0; i < cells.length - 5; i++) {
-    if (!rankRe.test(cells[i])) continue;
-    const rank = parseInt(cells[i]);
-    const team = cells[i + 1];
-    const pts = cells[i + 2];
-    const played = cells[i + 3];
-    const wins = cells[i + 4];
-    const losses = cells[i + 5];
-    if (!numRe.test(pts) || !numRe.test(played) || !numRe.test(wins) || !numRe.test(losses)) continue;
+  for (const cells of parseRows(html)) {
+    const rankMatch = rankRe.exec(cells[0] ?? "");
+    const team = cells[1] ?? "";
+    if (!rankMatch || !team) continue;
+    // Une équipe qui n'a pas encore joué a des colonnes vides : on garde la ligne.
+    if (cells[2] && !/^\d+$/.test(cells[2])) continue;
+    const rank = rankMatch[1] ? parseInt(rankMatch[1]) : standings.at(-1)?.rank ?? 1;
     standings.push({
       rank,
       team,
-      pts: parseInt(pts),
-      played: parseInt(played),
-      wins: parseInt(wins),
-      losses: parseInt(losses),
+      pts: num(cells[2]),
+      played: num(cells[3]),
+      wins: num(cells[4]),
+      losses: num(cells[5]),
       isGvvb: team.includes(CLUB),
     });
   }
@@ -108,8 +131,29 @@ export function parseStandings(html: string): Standing[] {
   return standings;
 }
 
-export async function fetchPoule(poule: string): Promise<{ matches: Match[]; standings: Standing[] }> {
-  const url = ffvbUrl(poule);
+export interface PouleData {
+  code: string;
+  label: string;
+  matches: Match[];
+  standings: Standing[];
+}
+
+/** Saison figée, lue depuis `src/data/archives/<saison>.json`. */
+export interface SaisonArchivee {
+  /** "2025-2026" */
+  saison: string;
+  /** "2025/2026" - pour les liens ffvbbeach.org */
+  saisonFfvb: string;
+  /** Date de la capture, ISO. */
+  archiveLe: string;
+  poules: PouleData[];
+}
+
+export async function fetchPoule(
+  poule: string,
+  saison?: string,
+): Promise<{ matches: Match[]; standings: Standing[] }> {
+  const url = ffvbUrl(poule, saison);
   try {
     const res = await fetch(url, {
       next: { revalidate: 3600 },
