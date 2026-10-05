@@ -126,7 +126,7 @@ site_gvvb/
 - **Hero** : photo de fond (`hero-bg.jpg`), gradient rouge/navy, titre GVVB en grand, logo blanc aligné à droite du titre, deux boutons CTA
 - **Accès rapide** : 2 tuiles navy — formulaire de contact et `/inscription`
 - **Équipes** : aperçu des 5 premières équipes (`TOUTES_EQUIPES.slice(0, 5)`), liens vers `/equipes#ancre`
-- **Actualités** : articles dont l'ouverture des inscriptions (août 2026, en avant) et les maillots Décathlon Pro (janvier 2026) avec photos
+- **Actualités** : articles dont le lancement de la saison 2026-2027 (octobre 2026, en avant), l'ouverture des inscriptions (août 2026) et les maillots Décathlon Pro (janvier 2026) avec photos
 - **Galerie photos** : grille 3 colonnes (photos `celebration-m.jpg`, `action-smash.jpg`, `portrait-f.jpg`)
 - **Partenaires** : section dédiée à la Librairie L'Écriture (logo, liens site + Instagram)
 - **Dossier d'inscription** : téléchargement du PDF de la saison en cours

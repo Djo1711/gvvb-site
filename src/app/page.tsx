@@ -19,11 +19,17 @@ const teams = TOUTES_EQUIPES.slice(0, 5).map((e) => ({
 
 const news = [
   {
+    date: "Octobre 2026",
+    title: "La nouvelle saison est lancée !!",
+    excerpt:
+      "Premier week-end de championnat pour nos deux équipes départementales. Samedi soir, la Départementale Masculine a parfaitement lancé sa saison en s'imposant 3-0 sur le terrain du Sporting Club Châtillonnais (25-16, 25-21, 25-22) et pointe déjà à la 2ᵉ place. Dimanche, la Départementale Féminine s'est inclinée 3-0 à Bourg-la-Reine (19-25, 12-25, 17-25) pour son premier match : la saison ne fait que commencer ! Rendez-vous dimanche 11 octobre au gymnase Yves Bodin pour le premier match à domicile des deux équipes : les filles reçoivent LSO Colombes à 13h, les garçons l'ACBB à 15h. Venez nombreux les encourager ! Tous les résultats et le calendrier sont sur la page Calendrier.",
+    featured: true,
+  },
+  {
     date: "Août 2026",
     title: `Inscriptions ${SAISON_CLUB} ouvertes`,
     excerpt:
       `Le dossier d'inscription ${SAISON_CLUB} est en ligne. Les cotisations vont de 135 € (Loisir dimanche matin) à 195 € (Départementale), avec une remise de 15 € dès le 2ᵉ membre d'une même famille et la possibilité de régler en plusieurs fois. Les dossiers complets sont à remettre avant ${DATE_LIMITE} : retrouvez les tarifs, les pièces à fournir et le PDF à télécharger sur la page Inscription.`,
-    featured: true,
   },
   {
     date: "Juin 2026",

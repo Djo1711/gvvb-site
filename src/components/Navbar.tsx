@@ -65,14 +65,15 @@ export default function Navbar() {
           Nous rejoindre
         </Link>
 
+        {/* Barres de 2px espacées de 6px : ±translate-y-2 (8px) les superpose au centre pour former la croix. */}
         <button
           className="lg:hidden p-2 rounded hover:bg-gray-100 transition-colors"
           onClick={() => setOpen(!open)}
           aria-label="Ouvrir le menu"
         >
-          <span className={`block w-6 h-0.5 bg-gray-700 transition-transform duration-200 ${open ? "rotate-45 translate-y-1.5" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-gray-700 transition-transform duration-200 ${open ? "translate-y-2 rotate-45" : ""}`} />
           <span className={`block w-6 h-0.5 bg-gray-700 my-1.5 transition-opacity ${open ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-gray-700 transition-transform duration-200 ${open ? "-rotate-45 -translate-y-1.5" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-gray-700 transition-transform duration-200 ${open ? "-translate-y-2 -rotate-45" : ""}`} />
         </button>
       </div>
 
