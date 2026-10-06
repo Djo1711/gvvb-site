@@ -24,6 +24,10 @@ const news = [
     excerpt:
       "Premier week-end de championnat pour nos deux équipes départementales. Samedi soir, la Départementale Masculine a parfaitement lancé sa saison en s'imposant 3-0 sur le terrain du Sporting Club Châtillonnais (25-16, 25-21, 25-22) et pointe déjà à la 2ᵉ place. Dimanche, la Départementale Féminine s'est inclinée 3-0 à Bourg-la-Reine (19-25, 12-25, 17-25) pour son premier match : la saison ne fait que commencer ! Rendez-vous dimanche 11 octobre au gymnase Yves Bodin pour le premier match à domicile des deux équipes : les filles reçoivent LSO Colombes à 13h, les garçons l'ACBB à 15h. Venez nombreux les encourager ! Tous les résultats et le calendrier sont sur la page Calendrier.",
     featured: true,
+    photos: [
+      { src: "/equipes/dep-masculine-2026.jpg", alt: "L'équipe Départementale Masculine du GVVB, saison 2026-2027" },
+      { src: "/equipes/dep-feminine-2026.jpg", alt: "L'équipe Départementale Féminine du GVVB, saison 2026-2027" },
+    ],
   },
   {
     date: "Août 2026",
@@ -220,6 +224,15 @@ export default function Home() {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {item.excerpt}
                 </p>
+                {"photos" in item && item.photos && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5">
+                    {item.photos.map((photo) => (
+                      <div key={photo.src} className="relative aspect-video overflow-hidden">
+                        <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                )}
                 {"images" in item && item.images && (
                   <div className="grid grid-cols-2 gap-4 mt-5">
                     {item.images.map((src: string) => (

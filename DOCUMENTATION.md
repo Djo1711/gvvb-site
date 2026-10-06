@@ -472,8 +472,9 @@ interface Standing {
 
 | Fichier | Équipe |
 |---|---|
-| `equipes/dep-masculine.jpg` | Départementale Masculine |
-| `equipes/dep-feminine.jpg` | Départementale Féminine + header Entraînements |
+| `equipes/dep-masculine-2026.jpg` | Départementale Masculine (octobre 2026) + actualité lancement de saison |
+| `equipes/dep-feminine-2026.jpg` | Départementale Féminine (octobre 2026) + actualité lancement de saison |
+| `equipes/dep-feminine.jpg` | Ancienne photo Départementale Féminine, header Entraînements |
 | `equipes/m15-feminine.jpg` | M13 / M15 Filles |
 | `equipes/loisir-or.jpg` | Loisir OR |
 

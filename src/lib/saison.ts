@@ -267,7 +267,7 @@ export const EQUIPES_COMPETITION: Equipe[] = [
     coachs: ["Christelle"],
     description:
       "L'équipe masculine évolue en championnat départemental dans les Hauts-de-Seine.",
-    photo: "/equipes/dep-masculine.jpg",
+    photo: "/equipes/dep-masculine-2026.jpg",
     creneaux: [
       "Lundi 20h - 22h30 · Yves du Manoir (Vaucresson)",
       "Mercredi 20h - 22h30 · Yves Bodin (Garches)",
@@ -283,7 +283,7 @@ export const EQUIPES_COMPETITION: Equipe[] = [
     coachs: ["Florian"],
     description:
       "L'équipe féminine évolue en championnat départemental dans les Hauts-de-Seine.",
-    photo: "/equipes/dep-feminine.jpg",
+    photo: "/equipes/dep-feminine-2026.jpg",
     creneaux: [
       "Mercredi 20h - 22h30 · Yves Bodin (Garches)",
       "Vendredi 20h30 - 22h30 · Yves Bodin (Garches)",
