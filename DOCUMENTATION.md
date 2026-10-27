@@ -145,7 +145,7 @@ Header : `supporters.jpg`
 |---|---|---|
 | Compétition Seniors | Départementale M, Départementale F | grand format photo/texte alterné |
 | Jeunes | M11, M13/M15 Garçons, M13/M15 Filles, M18 Filles, M18/M21 Mixte | grille de cartes |
-| Loisir | Loisir OR, 4×4 Féminine, Loisir Mixte, VSOP | grille de cartes |
+| Loisir | Loisir Argent, 4×4 Féminine, Loisir Mixte, VSOP | grille de cartes |
 
 Chaque fiche affiche niveau, genre, description, **créneaux**, coachs et liens FFVB.
 
@@ -476,7 +476,7 @@ interface Standing {
 | `equipes/dep-feminine-2026.jpg` | Départementale Féminine (octobre 2026) + actualité lancement de saison |
 | `equipes/dep-feminine.jpg` | Ancienne photo Départementale Féminine, header Entraînements |
 | `equipes/m15-feminine.jpg` | M13 / M15 Filles |
-| `equipes/loisir-or.jpg` | Loisir OR |
+| `equipes/loisir-or.jpg` | Loisir Argent (ex-Loisir OR) |
 
 Équipes **sans photo** (placeholder « Photo à venir ») : M11, M13/M15 Garçons,
 M18 Filles, M18/M21 Mixte, 4×4 Féminine, Loisir Mixte, VSOP.
@@ -532,7 +532,7 @@ rm -rf .next/
 | Haute | Compléter les mentions légales (adresse association, email, responsable publication) |
 | Haute | DNS : pointer `gvvb.fr` vers Vercel |
 | Haute | Google Search Console : soumettre le sitemap |
-| Haute | Ajouter le Loisir OR (et M15 / M18 si engagées) dans `POULES` dès que la FFVB publie leurs poules 2026/2027 |
+| Moyenne | Ajouter M15 / M18 dans `POULES` si les équipes sont engagées en 2026/2027 |
 | Moyenne | Confirmer le nom du gymnase du 20 rue de Suresnes : le dossier écrit « les Meuries », le site « Yves Bodin » |
 | Moyenne | Photos des équipes jeunes et loisir sans visuel (voir § Photos équipes) |
 | Moyenne | Vérifier les poules jeunes engagées en championnat (M18 Filles n'a pas encore de lien FFVB) |

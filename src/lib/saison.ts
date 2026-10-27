@@ -222,6 +222,8 @@ export function ffvbComiteUrl(saison: string = SAISON_FFVB): string {
 export const POULES = [
   { code: "1MA", label: "Départementale M" },
   { code: "1FA", label: "Départementale F" },
+  { code: "ARA", label: "Loisir Argent" },
+  { code: "LFB", label: "4×4 Féminine" },
 ] as const;
 
 /**
@@ -229,9 +231,7 @@ export const POULES = [
  * sur la page Calendrier sans résultats. Dès que la poule existe, déplacer
  * l'entrée dans POULES avec son code.
  */
-export const POULES_A_VENIR = [
-  { label: "Loisir OR", statut: "Inscriptions en cours" },
-] as const;
+export const POULES_A_VENIR: readonly { label: string; statut: string }[] = [];
 
 /**
  * Saisons archivées, de la plus récente à la plus ancienne. Les résultats
@@ -362,16 +362,17 @@ export const EQUIPES_JEUNES: Equipe[] = [
 
 export const EQUIPES_LOISIR: Equipe[] = [
   {
+    // Ancre "loisir-or" conservée : l'équipe jouait en poule OR jusqu'en 2025/2026.
     id: "loisir-or",
-    nom: "Loisir OR",
+    nom: "Loisir Argent",
     niveau: "Loisir Compétition",
     genre: "Mixte",
     coachs: [],
     description:
-      "L'équipe Loisir OR évolue dans la poule OR du championnat loisir. Une équipe mixte pour ceux qui veulent conjuguer compétition et plaisir du jeu.",
+      "L'équipe Loisir Argent évolue dans la poule Argent du championnat loisir mixte des Hauts-de-Seine. Une équipe mixte pour ceux qui veulent conjuguer compétition et plaisir du jeu.",
     photo: "/equipes/loisir-or.jpg",
     creneaux: ["Jeudi 20h - 22h30 · Yves du Manoir (Vaucresson)"],
-    liens: [],
+    liens: [{ label: "Poule Argent (ARA)", poule: "ARA" }],
   },
   {
     id: "loisir-4x4-feminine",
@@ -383,7 +384,7 @@ export const EQUIPES_LOISIR: Equipe[] = [
       "Un créneau féminin dédié au jeu à 4 contre 4 : plus de touches de balle, plus de rythme, dans une ambiance conviviale.",
     photo: null,
     creneaux: ["Mercredi 20h30 - 22h30 · Le Rallec (Garches)"],
-    liens: [],
+    liens: [{ label: "Poule 4×4 Féminin (LFB)", poule: "LFB" }],
   },
   {
     id: "loisir-mixte",
